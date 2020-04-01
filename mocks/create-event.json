@@ -1,5 +1,5 @@
 {
-    "body": "{\"restaurantName\":\"the third one\",\"attachment\":\"hello.jpg\"}",
+    "body": "{\"restaurantName\":\"hello\",\"attachment\":\"hello.jpg\"}",
     "requestContext": {
       "identity": {
         "cognitoIdentityId": "USER-SUB-1234"

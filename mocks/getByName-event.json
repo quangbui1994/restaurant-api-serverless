@@ -1,6 +1,6 @@
 {
     "pathParameters": {
-        "restaurantName": "the third one"
+        "id": "the third one"
     },
     "requestContext": {
       "identity": {

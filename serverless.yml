@@ -68,7 +68,7 @@ functions:
     handler: getByName.main
     events:
       - http:
-          path: restaurants/{restaurantName}
+          path: restaurants/{id}
           method: get
           cors: true
           authorizer: aws_iam

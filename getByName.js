@@ -2,7 +2,7 @@ import * as dynamoDbLib from "./libs/dynamodb-lib";
 import { success, failure } from "./libs/response-lib";
 
 export async function main(event, context) {
-    const data = JSON.parse(event.body);
+    // const data = JSON.parse(event.body);
     const params = {
         TableName: process.env.tableName,
         // 'KeyConditionExpression' defines the condition for the query
@@ -13,7 +13,7 @@ export async function main(event, context) {
         //   of the authenticated user
         KeyConditionExpression: "restaurantName = :restaurantName and userId = :userId",
         ExpressionAttributeValues: {
-        ":restaurantName": event.pathParameters.restaurantName,
+        ":restaurantName": event.pathParameters.id,
         ":userId": event.requestContext.identity.cognitoIdentityId
         }
     };
