@@ -1,5 +1,7 @@
 {
-    "body": "{\"restaurantName\": \"Social Burgerjoint Citycenter\"}",
+    "pathParameters": {
+        "restaurantName": "the third one"
+    },
     "requestContext": {
       "identity": {
         "cognitoIdentityId": "USER-SUB-1234"

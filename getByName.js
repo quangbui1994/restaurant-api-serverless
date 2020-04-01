@@ -13,7 +13,7 @@ export async function main(event, context) {
         //   of the authenticated user
         KeyConditionExpression: "restaurantName = :restaurantName and userId = :userId",
         ExpressionAttributeValues: {
-        ":restaurantName": data.restaurantName,
+        ":restaurantName": event.pathParameters.restaurantName,
         ":userId": event.requestContext.identity.cognitoIdentityId
         }
     };
@@ -21,7 +21,7 @@ export async function main(event, context) {
     try {
         const result = await dynamoDbLib.call("query", params);
         // Return the matching list of items in response body
-        return success(result.Items);
+        return success(result);
     } catch (e) {
         return failure({ status: e.message });
     }
