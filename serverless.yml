@@ -104,7 +104,7 @@ functions:
     handler: delete.main
     events:
       - http:
-          path: restaurants/{id}
+          path: restaurants/{restaurantName}
           method: delete
           cors: true
           authorizer: aws_iam

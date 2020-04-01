@@ -11,6 +11,11 @@ export async function main(event, context) {
             userId: event.requestContext.identity.cognitoIdentityId,
             restaurantId: event.pathParameters.id
         }
+        // KeyConditionExpression: "userId = :userId and restaurantName = :restaurantName",
+        // ExpressionAttributeValues: {
+        //     ":userId": event.requestContext.identity.cognitoIdentityId,
+        //     ":restaurantName": event.pathParameters.restaurantName
+        // }
     };
 
     try {
