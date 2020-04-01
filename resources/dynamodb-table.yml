@@ -12,6 +12,6 @@ Resources:
         - AttributeName: userId
           KeyType: HASH
         - AttributeName: restaurantName
-          KeyType: HASH
+          KeyType: RANGE
       # Set the capacity to auto-scale
       BillingMode: PAY_PER_REQUEST
